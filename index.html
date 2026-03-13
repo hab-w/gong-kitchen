@@ -22,6 +22,7 @@ scroll-behavior:smooth;
 body{
 background:#fff7f0;
 color:#3b2415;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -72,25 +73,30 @@ cursor:pointer;
 .nav-links{
 position:absolute;
 top:80px;
-right:0;
+left:0;
+width:100%;
 background:#fff7f0;
-width:200px;
 display:flex;
 flex-direction:column;
-align-items:flex-start;
-padding:20px;
-gap:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-transform:translateX(100%);
-transition:0.3s;
+align-items:center;
+gap:20px;
+padding:20px 0;
+
+max-height:0;
+overflow:hidden;
+transition:max-height 0.3s ease;
 }
 
 .nav-links.active{
-transform:translateX(0);
+max-height:200px;
 }
 
 .menu-toggle{
 display:block;
+}
+
+nav a{
+margin:0;
 }
 
 }
