@@ -31,7 +31,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 8%;
-background:#3b2415;
+background:#fff7f0;
+color:#3b2415;
 position:sticky;
 top:0;
 }
@@ -42,7 +43,7 @@ align-items:center;
 gap:10px;
 font-size:22px;
 font-weight:700;
-color:white;
+color:#3b2415;
 }
 
 .logo img{
@@ -52,8 +53,12 @@ height:70px;
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:white;
+color:#3b2415;
 font-weight:600;
+}
+
+nav a:hover{
+color:#ffb347;
 }
 
 /* HERO */
@@ -128,6 +133,7 @@ gap:30px;
 }
 
 .card{
+position:relative;
 background:white;
 border-radius:20px;
 box-shadow:0 6px 20px rgba(0,0,0,0.08);
@@ -136,7 +142,8 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 12px 28px rgba(0,0,0,0.15);
 }
 
 .card img{
@@ -152,6 +159,40 @@ font-size:22px;
 
 .card p{
 padding:0 15px 20px;
+}
+
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+background:#ff8a00;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+font-size:14px;
+font-weight:600;
+}
+
+/* REVIEW */
+
+.reviews{
+padding:80px 8%;
+background:white;
+text-align:center;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.review-card{
+background:#fff7f0;
+padding:25px;
+border-radius:16px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
 }
 
 /* VIRAL */
@@ -178,8 +219,8 @@ border-radius:20px;
 /* ORDER */
 
 .order{
-background:#ff8a00;
-color:white;
+background:#fff7f0;
+color:#3b2415;
 padding:80px 8%;
 text-align:center;
 }
@@ -197,6 +238,13 @@ padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
 font-weight:700;
+transition:0.25s ease;
+display:inline-block;
+}
+
+.order-buttons a:hover{
+transform:translateY(-4px) scale(1.05);
+box-shadow:0 10px 22px rgba(0,0,0,0.18);
 }
 
 .gofood{
@@ -206,6 +254,19 @@ color:white;
 
 .grab{
 background:#00b14f;
+color:white;
+}
+
+.gofood:hover{
+background:#c62828;
+}
+
+.grab:hover{
+background:#009e45;
+}
+
+.wa:hover{
+background:#ff8a00;
 color:white;
 }
 
@@ -234,6 +295,44 @@ text-align:center;
 padding:25px;
 background:#3b2415;
 color:white;
+}
+
+.wa-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+z-index:999;
+}
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.section h2{
+font-size:32px;
+}
+
+.video-grid iframe{
+height:320px;
+}
+
+.logo img{
+height:55px;
+}
+
 }
 
 </style>
@@ -279,9 +378,13 @@ Gong Kitchen
 <div class="menu-grid">
 
 <div class="card">
+
+<div class="badge">Best Seller</div>
+
 <img src="images/gong.jpeg">
 <h3>Bakso Babi Gong</h3>
 <p>5 Pcs Bakso Babi homemade dipadukan dengan bihun/kwetiaw dengan kuah kaldu babi racikan Gong Kitchen</p>
+
 </div>
 
 <div class="card">
@@ -300,6 +403,34 @@ Gong Kitchen
 <img src="images/kundur.jpeg">
 <h3>Wintermelon Lemon</h3>
 <p>Es kundur lemon dengan jelly aren segar.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="reviews">
+
+<h2>What Customers Say</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>“Bakso nya enak banget! Kuahnya rich banget.”</p>
+<strong>— Kevin</strong>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>“Burger Gong surprisingly juicy, wajib coba!”</p>
+<strong>— Maria</strong>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>“Wintermelon lemon nya seger banget.”</p>
+<strong>— Daniel</strong>
 </div>
 
 </div>
@@ -330,7 +461,7 @@ Gong Kitchen
 
 <a href="#" class="gofood">GoFood</a>
 <a href="#" class="grab">GrabFood</a>
-<a href="#" class="wa">WhatsApp</a>
+<a href="#" class="wa">ShopeeFood</a>
 
 </div>
 
@@ -349,8 +480,7 @@ Gong Kitchen
 © 2026 Gong Kitchen
 
 </footer>
-
+<a href="https://wa.me/6281368683993" class="wa-float">💬</a>
 </body>
 
 </html>
-
